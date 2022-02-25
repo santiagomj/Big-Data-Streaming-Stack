@@ -23,4 +23,6 @@ el repositorio y ejecucar docker compose:
 
 `docker-compose up`
 
+Creación de usuario Apache Superset
 
+`docker exec -it superset superset-init`
