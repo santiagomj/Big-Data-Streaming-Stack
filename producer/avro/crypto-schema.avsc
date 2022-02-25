@@ -1,0 +1,55 @@
+{
+  "namespace": "io.codebrews.cryptoschema",
+  "type": "record",
+  "name": "CryptoSchema",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "rank",
+      "type": "int"
+    },
+    {
+      "name": "symbol",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "supply",
+      "type": ["float", "null"]
+    },
+    {
+      "name": "maxSupply",
+      "type": ["float", "null"]
+    },
+    {
+      "name": "marketCapUsd",
+      "type": ["float", "null"]
+    },
+    {
+      "name": "volumeUsd24Hr",
+      "type": ["float", "null"]
+    },
+    {
+      "name": "priceUsd",
+      "type": ["float", "null"]
+    },
+    {
+      "name": "changePercent24Hr",
+      "type": ["float", "null"]
+    },
+    {
+      "name": "vwap24Hr",
+      "type": ["float", "null"]
+    },
+    {
+      "name": "explorer",
+      "type": ["string", "null"]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+kafka-topics.sh --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 1 --topic crypto-prices
+kafka-topics.sh --list --zookeeper zookeeper:2181
+kafka-topics.sh --delete --zookeeper zookeeper:2181 --topic crypto-prices
+
+kafka-console-producer.sh --broker-list kafka:9092 --topic crypto-prices
+{'user_id': 1, 'recipient_id': 2, 'message': 'Hi'}
+{'user_id': 2, 'recipient_id': 1, 'message': 'Hello there'}
+
+kafka-console-consumer.sh --bootstrap-server kafka:9092 --topic crypto-prices --from-beginning
+kafka-console-consumer.sh --bootstrap-server kafka:9092 --topic crypto-prices
+
+kafka-topics.sh --version
+
+find . -type f -name "kafka-topics.sh"
+./opt/kafka_2.13-2.8.1/bin/kafka-topics.sh
+
+find . -type f -name "spark-submit"
+./local/bin/spark-submit
+
+find . -type f -name "server.properties"
+./opt/kafka_2.13-2.8.1/config/server.properties
+
+[root@hadoop-master /]# hive
+hive> use default;
+hive> create external table customer_text(id int, id_usuario int, id_rank int) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE location 's3a://crypto-prices2/';
+hive> select * from customer_text;
+
+# find port
+set hive.server2.thrift.port;
+
+docker exec -it superset superset-init
+
+hive://hive@hive-server:10000/default
+
+CREATE TABLE cryto_prices ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe' STORED AS AVRO TBLPROPERTIES ('avro.schema.url'='s3a://avro-schema/crypto-schema.avsc');
+CREATE EXTERNAL TABLE cryto_prices2 LIKE cryto_prices STORED AS PARQUET LOCATION 's3a://crypto-prices-streaming/events';
+select * from cryto_prices2;
+
+
+
