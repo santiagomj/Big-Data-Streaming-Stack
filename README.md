@@ -19,7 +19,7 @@ Clonar o descargar el repositorio:
 `git clone https://github.com/santiagomj/Big-Data-Streaming-Stack.git`
 
 Acceder por consola o algún ambiente de desarrollo a la carpeta donde fue descargado 
-el repositorio y ejecucar docker compose:
+el repositorio y ejecutar docker compose:
 
 `docker-compose up`
 
