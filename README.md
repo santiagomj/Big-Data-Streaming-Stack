@@ -26,3 +26,13 @@ el repositorio y ejecutar docker compose:
 Creación de usuario Apache Superset
 
 `docker exec -it superset superset-init`
+
+## Servicios locales
+
+- Control Center: <http://localhost:9021>
+- Jupyter Notebook: <http://localhost:8888>
+- Hue: <http://localhost:8889>
+- Superset: <http://localhost:8088>
+- Minio: http://<IP_NODO>:9000/minio
+
+**IMPORTANTE**: Para encontrar la IP en la que está ejecutandose Minio, se debe ir a los logs del contenedor.
