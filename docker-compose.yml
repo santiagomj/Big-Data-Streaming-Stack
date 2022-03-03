@@ -87,6 +87,7 @@ services:
       - minio/minio.env
     ports:
       - "9000:9000"
+      - "9001:9001"
     command: minio server --console-address ":9001" /minio_data_lake
 
   createbuckets:
