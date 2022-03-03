@@ -33,7 +33,7 @@ docker exec -it superset superset-init
 hive://hive@hive-server:10000/default
 
 CREATE TABLE cryto_prices ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe' STORED AS AVRO TBLPROPERTIES ('avro.schema.url'='s3a://avro-schema/crypto-schema.avsc');
-CREATE EXTERNAL TABLE cryto_prices2 LIKE cryto_prices STORED AS PARQUET LOCATION 's3a://crypto-prices-streaming/events';
+CREATE EXTERNAL TABLE cryto_prices2 LIKE cryto_prices STORED AS PARQUET LOCATION 's3a://crypto-prices/events';
 select * from cryto_prices2;
 
 

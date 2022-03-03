@@ -33,6 +33,6 @@ Creación de usuario Apache Superset
 - Jupyter Notebook: <http://localhost:8888>
 - Hue: <http://localhost:8889>
 - Superset: <http://localhost:8088>
-- Minio: http://<IP_NODO>:9000/minio
+- Minio: <http://localhost:9001>
 
 **IMPORTANTE**: Para encontrar la IP en la que está ejecutandose Minio, se debe ir a los logs del contenedor.
