@@ -34,5 +34,3 @@ Creación de usuario Apache Superset
 - Hue: <http://localhost:8889>
 - Superset: <http://localhost:8088>
 - Minio: <http://localhost:9001>
-
-**IMPORTANTE**: Para encontrar la IP en la que está ejecutandose Minio, se debe ir a los logs del contenedor.
