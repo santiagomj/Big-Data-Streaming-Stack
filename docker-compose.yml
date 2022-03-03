@@ -70,9 +70,11 @@ services:
       - producer/producer_confs.env
 
   producer_service:
+    restart: on-failure
     container_name: producer_service
     depends_on:
-      - kafka
+      - createbuckets
+      - schema-registry
     build:
       context: producer
       dockerfile: producer_service.Dockerfile
