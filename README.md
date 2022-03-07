@@ -113,6 +113,8 @@ encuentras unas variables de entorno llamadas **HDFS_CONF_fs_s3a** en ellas encu
 
 ![creden](./docs/creden.png)
 
+**IMPORTANTE**: Las tablas que se ven a continuación, no estan definidas inicialmente en el Docker Compose, por lo que inicialemnte, no existirá ninguna tabla en la base de datos "default". dichas tablas se pueden crear con Apache Hive (Desde la interfaz de Hue) como tablas externas, en el archivo commands.txt se encuentran algunos comandos que pueden ser de ayuda para crear tablas externas.
+
 No saldrá el navegador, desde allí nos dirijimos a **HIVE**, **default** o el nombre de tu base de datos, **selecionas** las tablas que deseas trabajar y finalmente en **cargar**, tendrás tus datos cargados y listos para trabajar con **power BI**.
 
 ![data](./docs/data.png)
